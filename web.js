@@ -8,7 +8,9 @@ app.use(express.logger());
 app.get('/', function(request, response) {
     
 //response.send('Hello World! 2');
-response.send(fs.readFileSync("./index.html").toString();
+var text = fs.readFileSync('./index.html', 'utf-8');
+response.send(text);
+//response.send(fs.readFileSync("./index.html").toString();
 console.log ("Read file")
 });
 
